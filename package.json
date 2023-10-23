@@ -1,0 +1,29 @@
+{
+  "name": "typedoc-comments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "rm -rf dist && tsc",
+    "test": "node --require ts-node/register --test ./src/*.test.ts"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.25.2",
+    "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliksend/typedoc-comments.git"
+  }
+}
