@@ -10,7 +10,7 @@ export function formatParsedComments(comments: ParsedComment[], indent: number =
   for (const c of comments) {
     switch (c.type) {
       case 'comment':
-        res.push(`${prefix}${c.text}`)
+        res.push(`${prefix}${c.text.split('\n').map((v, index) => index === 0 ? v : `\t${v}`).join('\n')}`)
         break
       case 'if':
         if (c.thenComments.length === 0 && c.elseComments.length === 0) {

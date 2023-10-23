@@ -22,7 +22,7 @@ describe('formatParsedComments', () => {
       }]
     }, {
       type: 'comment',
-      text: 'comment 2'
+      text: 'comment 2\ncomment 3'
     }, {
       type: 'if',
       thisNodeHaveComment: true,
@@ -40,7 +40,7 @@ describe('formatParsedComments', () => {
       '\t1. then comment 1',
       '1. else',
       '\t1. else comment 1',
-      '1. comment 2',
+      '1. comment 2\n\tcomment 3',
       '\t...',
       '1. else',
       '\t1. else comment 2'
